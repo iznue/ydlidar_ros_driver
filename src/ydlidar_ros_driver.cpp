@@ -52,9 +52,8 @@ int main(int argc, char **argv) {
   ros::init(argc, argv, "ydlidar_ros_driver");
   ROS_INFO("YDLIDAR ROS Driver Version: %s", SDKROSVerision);
   ros::NodeHandle nh;
-  ros::Publisher scan_pub = nh.advertise<sensor_msgs::LaserScan>("scan", 1);
-  ros::Publisher pc_pub = nh.advertise<sensor_msgs::PointCloud>("point_cloud",
-                          1);
+  ros::Publisher scan_pub = nh.advertise<sensor_msgs::LaserScan>("laser_scan", 1);
+  ros::Publisher pc_pub = nh.advertise<sensor_msgs::PointCloud>("point_cloud", 1);
 //  ros::Publisher laser_fan_pub =
 //    nh.advertise<ydlidar_ros_driver::LaserFan>("laser_fan", 1);
 
